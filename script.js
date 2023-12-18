@@ -30,5 +30,13 @@ function userMessage(event) {
 }
 
 function disableInput() {
-    $("#cb-compose textarea").addClass("disabled")
+    var textArea = "#cb-compose textarea";
+    var submitButton = "#cb-send-message-btn";
+
+    $(textArea).addClass("disabled");
+    $(textArea).attr("disabled", true);
+    $(textArea).val("To continue using the chatbot, please sign up using the link above.")
+
+    $(submitButton).attr("disabled", true)
+    $(submitButton).css("cursor", "not-allowed")
 }
