@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -29,8 +31,6 @@
     src: url(Assets/Aeonik/Aeonik-Bold.ttf);
     font-weight: bold;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 
 /* Headings */
 
@@ -350,6 +350,7 @@ footer p {
     gap: 25px;
     height: 300px;
     padding: 30px 20px 20px 20px;
+    overflow: hidden;
 }
 
 .cb-bot_message {
@@ -367,6 +368,9 @@ footer p {
     font-weight: 400;
     line-height: 125%;
     letter-spacing: 0.14px;
+
+    /* Animation */
+    animation: slideDown 0.5s ease-in forwards;
 }
 
 .cb-user_message {
@@ -385,7 +389,22 @@ footer p {
     font-weight: 400;
     line-height: 125%;
     letter-spacing: 0.14px;
+
+    /* Animation */
+    animation: slideDown 0.5s ease-in forwards;
 }
+
+/* Message Animation */
+@keyframes slideDown {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
 /* Compose */
 #cb-compose {
@@ -426,6 +445,15 @@ footer p {
 
 #cb-send-message-btn img {
     -webkit-user-drag: none !important;
+}
+
+.disabled {
+    text-align: center;
+    background: #0000001f;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding-top: 10px;
+    cursor: not-allowed;
 }
 
 /* --------------------------- */
@@ -519,9 +547,9 @@ footer p {
         font-size: 12px;
     }
 
-    /* ---------------- */
+    /* --------------- */
     /* --- Chatbot --- */
-    /* ---------------- */
+    /* --------------- */
 
     #chatbot {
         width: 90%;

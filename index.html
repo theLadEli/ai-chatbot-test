@@ -46,20 +46,10 @@
 
                 <div id="cb-conversation">
 
-                    <div class="cb-bot_message">
-                        👋 Hello and welcome to BuildBuddy! I'm BuildBot, your personal guide to home extensions. I'm
-                        here to answer your questions and provide tailored advice for your project. How can I assist you
-                        today?
-                    </div>
-
-                    <div class="cb-user_message">
-                        How much will my single storey extension cost me?
-                    </div>
-
                 </div>
 
                 <div id="cb-compose">
-                    <form id="cb-compose-message-form" action="">
+                    <form id="cb-compose-message-form" action="" onsubmit="userMessage(event)">
 
                         <textarea placeholder="Type your message here..." name="compose-message-field" id="cb-compose-message-field" cols="45" rows="3"></textarea>
                         <button type="submit" id="cb-send-message-btn">
@@ -133,6 +123,8 @@
         <p>© 2023 BuildBuddy - All rights reserved.</p>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
