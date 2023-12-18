@@ -14,7 +14,7 @@ $(document).ready(function initialMessage() {
 
 });
 
-// A function called on form submission to display the users input
+// A function called on form submission
 function userMessage(event) {
     event.preventDefault();
 
@@ -26,7 +26,8 @@ function userMessage(event) {
         </div>
     `)
 
-    disableInput()
+    disableInput();
+    botResponse();
 }
 
 function disableInput() {
@@ -39,4 +40,12 @@ function disableInput() {
 
     $(submitButton).attr("disabled", true)
     $(submitButton).css("cursor", "not-allowed")
+}
+
+function botResponse() {
+    $("#cb-conversation").append(`
+    <div class="cb-bot_message">
+        To get detailed, personalized assistance, please sign up for BuildBuddy. It's quick, easy, and opens up a world of tailored advice for your project.
+    </div>
+`)
 }

@@ -350,8 +350,9 @@ footer p {
     gap: 25px;
     height: 300px;
     padding: 30px 20px 20px 20px;
-    overflow: hidden;
-}
+    overflow-y: scroll;
+    overflow-y: auto;
+} 
 
 .cb-bot_message {
     /* Message Box */
