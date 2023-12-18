@@ -449,13 +449,18 @@ footer p {
     }
 
     /* Hero Section */
+    #hero-section {
+        overflow-x: hidden;
+    }
+
     #hs-inner {
         flex-direction: column;
-        padding: 50px 30px;
+        padding: 50px 0;
         gap: 50px;
     }
 
     #hs-content {
+        padding: 0 20px;
         gap: 25px;
     }
 
@@ -514,4 +519,11 @@ footer p {
         font-size: 12px;
     }
 
+    /* ---------------- */
+    /* --- Chatbot --- */
+    /* ---------------- */
+
+    #chatbot {
+        width: 90%;
+    }
 }
