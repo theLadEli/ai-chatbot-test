@@ -30,6 +30,8 @@
     font-weight: bold;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
 /* Headings */
 
 h1 {
@@ -186,14 +188,6 @@ a {
     gap: 40px;
 }
 
-#chatbot {
-    background: var(--background-primary);
-    width: 50%;
-    height: 450px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.15);
-}
-
 /* Tools */
 
 #tools {
@@ -295,6 +289,146 @@ footer p {
 }
 
 /* --------------------------- */
+/* --------- Chatbot --------- */
+/* --------------------------- */
+
+/* Title Bar */
+#chatbot {
+    background: var(--background-primary);
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.15);
+}
+
+#cb-header {
+    /* Layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Style */
+    padding: 15px 25px;
+    border-radius: 15px 15px 0 0;
+    background-color: #424343;
+}
+
+#window-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+
+#window-nav div {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: #EE6A5F;
+    border: solid 0.5px #CE5347;
+    box-shadow: 0px 0px 6px 0px #EC6D62 inset;
+}
+
+.orange {
+    background-color: #F5BD4F;
+    border: solid 0.5px #D6A243;
+    box-shadow: 0px 0px 6px 0px #F5C451 inset;
+}
+
+.green {
+    background-color: #61C454;
+    border: solid 0.5px #58A942;
+    box-shadow: 0px 0px 6px 0px #68CC58 inset;
+}
+
+/* Conversation */
+#cb-conversation {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 300px;
+    padding: 30px 20px 20px 20px;
+}
+
+.cb-bot_message {
+    /* Message Box */
+    width: 75%;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 7px;
+
+    /* Typography */
+    color: #000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    letter-spacing: 0.14px;
+}
+
+.cb-user_message {
+    /* Message Box */
+    width: 75%;
+    padding: 15px;
+    background: linear-gradient(98deg, #228D99 0%, #57B3BD 89.04%);
+    border-radius: 7px;
+    align-self: flex-end;
+
+    /* Typography */
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    letter-spacing: 0.14px;
+}
+
+/* Compose */
+#cb-compose {
+    border-top: 1px solid rgba(0, 0, 0, 0.20);
+    background: #fff;
+    padding: 20px 30px 20px 20px;
+    border-radius: 0 0 15px 15px;
+}
+
+#cb-compose-message-form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#cb-compose-message-field {
+    border: none;
+    outline: none;
+    resize: vertical;
+
+    /* Typography */
+    color: #000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    letter-spacing: 0.14px;
+    opacity: 0.6;
+}
+
+#cb-send-message-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#cb-send-message-btn img {
+    -webkit-user-drag: none !important;
+}
+
+/* --------------------------- */
 /* --- Mobile Optimisation --- */
 /* --------------------------- */
 
@@ -325,10 +459,6 @@ footer p {
         gap: 25px;
     }
 
-    #chatbot {
-        width: 100%;
-    }
-
     /* Tools */
     #ts-inner {
         padding: 80px 30px;
@@ -350,7 +480,7 @@ footer p {
         flex-direction: column-reverse;
         padding: 0px;
     }
-    
+
     #br-inner div {
         padding: 30px;
     }
@@ -384,8 +514,4 @@ footer p {
         font-size: 12px;
     }
 
-}
-
-/* Small desktops and tablets */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
 }
