@@ -1,0 +1,17 @@
+{
+  "name": "chatbot-backend",
+  "version": "1.0.0",
+  "description": "The backend for the Chatbot demo. This backend will be used to store user submitted messages in a CSV.",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eli",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "csv-writer": "^1.6.0",
+    "express": "^4.18.2"
+  }
+}
