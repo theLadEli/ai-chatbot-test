@@ -44,8 +44,13 @@ function disableInput() {
 
 function botResponse() {
     $("#cb-conversation").append(`
-    <div class="cb-bot_message">
-        To get detailed, personalized assistance, please sign up for BuildBuddy. It's quick, easy, and opens up a world of tailored advice for your project.
-    </div>
-`)
+        <div class="cb-bot_message">
+            To get detailed, personalized assistance, please sign up for BuildBuddy. It's quick, easy, and opens up a world of tailored advice for your project.
+        </div>
+    `)
+
+    
+    $("#cb-conversation").append(`
+        <a id="cb-bot_response-btn" href="https://app.buildbuddy.co/register">Sign Up</a>
+    `)
 }
