@@ -48,7 +48,7 @@
                 </div>
 
                 <div id="cb-compose">
-                    <form id="cb-compose-message-form" action="" onsubmit="userMessage(event)">
+                    <form id="cb-compose-message-form" action="/save-message" onsubmit="userMessage(event)" method="POST">
 
                         <textarea placeholder="Type your message here..." name="compose-message-field" id="cb-compose-message-field" cols="45" rows="3"></textarea>
                         <button type="submit" id="cb-send-message-btn">

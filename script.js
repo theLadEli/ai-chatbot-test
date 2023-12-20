@@ -27,6 +27,7 @@ function userMessage(event) {
     `)
 
     disableInput();
+    sendMessage(userSubmittedMessage);
     botResponse();
 }
 
@@ -47,10 +48,35 @@ function botResponse() {
         <div class="cb-bot_message">
             To get detailed, personalized assistance, please sign up for BuildBuddy. It's quick, easy, and opens up a world of tailored advice for your project.
         </div>
-    `)
+    `);
 
-    
     $("#cb-conversation").append(`
         <a id="cb-bot_response-btn" href="https://app.buildbuddy.co/register">Sign Up</a>
-    `)
+    `);
+}
+
+function sendMessage(userMessage) {
+
+    $.ajax({
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            type: 'POST',
+            url: 'http://localhost:3000/saveMessage',
+            data: JSON.stringify({user_message: userMessage})
+
+        })
+
+        // .done((data) => {
+        //     console.log({
+        //         data
+        //     });
+        // })
+        .fail((err) => {
+            console.error(err);
+        })
+        // .always(() => {
+        //     console.log('always called');
+        // });
+
 }
